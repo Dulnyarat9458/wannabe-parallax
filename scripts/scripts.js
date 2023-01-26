@@ -2,10 +2,10 @@ var moonState = document.getElementById("sub-start-section");
 var prepareState = document.getElementById("prepare-section");
 var aboutInfo = document.getElementById("about-section");
 var stat = document.getElementById("stat-section");
-var special = document.getElementById("special-section")
-let intervalId;
+var special = document.getElementById("special-section");
 var count = 0;
 var counted = false;
+let intervalId;
 
 window.addEventListener("scroll", function () {
   var divTop = moonState.getBoundingClientRect().top;
@@ -13,7 +13,6 @@ window.addEventListener("scroll", function () {
   var statTop = stat.getBoundingClientRect().top;
   var specialTop = special.getBoundingClientRect().top;
   var ufo_1_movement = screen.width + 10;
-
 
   if (specialTop < 0) {
     entrance.classList.add("entrance-animation-class");
@@ -63,9 +62,14 @@ window.addEventListener("scroll", function () {
     intervalId = setInterval(startCount, 10);
   }
 
-  if(statTop >= this.screen.height){
-    count = 0 ;
+  if (statTop >= this.screen.height) {
+    count = 0;
+  }
 
+  if (specialTop <= 200) {
+    document.querySelector(".sp-contain").style.opacity = 1;
+  } else {
+    document.querySelector(".sp-contain").style.opacity = 0;
   }
 });
 
@@ -82,4 +86,3 @@ const startCount = () => {
     document.getElementById("counter-6").innerHTML = count;
   }
 };
-

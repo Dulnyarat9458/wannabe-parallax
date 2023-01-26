@@ -29,6 +29,78 @@ footer {
   font-family: "Fira Code", monospace !important;
 }
 
+section {
+  overflow-x: hidden;
+  font-family: "Fira Code", monospace;
+}
+
+#start-section {
+  height: 100vh;
+}
+
+#sub-start-section {
+  position: relative;
+  height: 100vh;
+}
+
+#about-section {
+  position: relative;
+  color: #e5e5e5;
+  background-color: black;
+}
+#about-section h2 {
+  color: white;
+}
+
+#service-section {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #e5e5e5;
+}
+#service-section h2 {
+  color: white;
+  text-align: center;
+}
+#service-section .contain-pad img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#stat-section {
+  background-color: black;
+}
+#stat-section .row {
+  max-width: 1920px;
+  margin: auto;
+}
+#stat-section .row .col-md-4 {
+  padding: 0;
+}
+
+#special-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 72px 0;
+  background-color: black;
+  color: #e5e5e5;
+}
+#special-section h2 {
+  color: white;
+  text-align: center;
+}
+#special-section .col-md-6 {
+  position: relative;
+}
+
+#bg-parallax {
+  display: none;
+}
+
 .space-1 {
   height: 500px;
   transition: 0.5s;
@@ -110,108 +182,17 @@ footer {
   z-index: 20;
 }
 
-section {
-  overflow-x: hidden;
-  font-family: "Fira Code", monospace;
-}
-
-#start-section {
-  height: 100vh;
-}
-
-#sub-start-section {
-  position: relative;
-  height: 100vh;
-}
-
 .h-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-#about-section {
-  position: relative;
-  color: #e5e5e5;
-  background-color: black;
-}
-#about-section h2 {
-  color: white;
+.sp-contain {
+  transition: 0.5s;
+  opacity: 0;
 }
 
-#service-section {
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  color: #e5e5e5;
-}
-#service-section h2 {
-  color: white;
-  text-align: center;
-}
-#service-section .contain-pad img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#stat-section {
-  background-color: black;
-}
-#stat-section .row {
-  max-width: 1920px;
-  margin: auto;
-}
-#stat-section .row .col-md-4 {
-  padding: 0;
-}
-
-#special-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 72px 0;
-  background-color: black;
-  color: #e5e5e5;
-}
-#special-section h2 {
-  color: white;
-  text-align: center;
-}
-#special-section .col-md-6 {
-  position: relative;
-}
-
-.entrance {
-  visibility: hidden;
-  position: absolute;
-  left: -100%;
-}
-
-.entrance {
-  -webkit-animation: entrance-animation 0.5s ease-in;
-          animation: entrance-animation 0.5s ease-in;
-}
-
-@-webkit-keyframes entrance-animation {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 0;
-  }
-}
-
-@keyframes entrance-animation {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 0;
-  }
-}
 .stat-box {
   display: flex;
   flex-direction: column;
@@ -278,23 +259,6 @@ section {
   border-bottom: 1px solid white;
 }
 
-@-webkit-keyframes rotate-center {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-center {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .parallax-layer {
   z-index: -1;
   position: fixed;
@@ -313,10 +277,6 @@ section {
   background-size: cover;
 }
 
-#bg-parallax {
-  display: none;
-}
-
 .foot-pad {
   padding: 64px 0;
 }
@@ -327,4 +287,22 @@ section {
 
 .v-flex {
   display: flex;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
