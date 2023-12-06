@@ -7,6 +7,7 @@ var count = 0;
 var counted = false;
 let intervalId;
 
+
 window.addEventListener("scroll", function () {
   var divTop = moonState.getBoundingClientRect().top;
   var aboutTop = aboutInfo.getBoundingClientRect().top;
